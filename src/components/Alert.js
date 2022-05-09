@@ -5,7 +5,7 @@ const Alert = ({alert, setAlert}) => {
         setTimeout(() => {
             setAlert(false)
         },5000)
-    },[alert])
+    },[setAlert, alert])
   return (
     <div>
     { alert && <div class="flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">

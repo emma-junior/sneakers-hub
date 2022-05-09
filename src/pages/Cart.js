@@ -22,7 +22,7 @@ const Cart = () => {
           <CartSummary alert={alert} setAlert={setAlert} />
         </div>
       </div>
-      <div className='absolute lg:top-52 lg:left-[500px] '>
+      <div className='absolute lg:top-52 lg:left-[500px] left-16 '>
         <Alert alert={alert} setAlert={setAlert} />
       </div>
       <div className="mt-20">
