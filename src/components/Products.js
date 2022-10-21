@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import ReactPaginate from 'react-paginate';
 import { FaSearch } from 'react-icons/fa'
 import ProductCard from './ProductCard';
