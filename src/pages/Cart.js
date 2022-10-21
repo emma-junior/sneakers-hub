@@ -11,23 +11,21 @@ const Cart = () => {
 
   return (
     <div className="bg-[#E5E5E5] h-full">
-      <div className="">
         <Navbar />
-      </div>
-      <div className="">
+      <div className='lg:w-[90%] mx-auto'>
         <div className="pt-24">
           <CartItemsMap />
         </div>
         <div className="lg:absolute lg:right-10 lg:top-48 mx-3">
           <CartSummary alert={alert} setAlert={setAlert} />
         </div>
-      </div>
-      <div className='absolute lg:top-52 lg:left-[500px] left-16 '>
-        <Alert alert={alert} setAlert={setAlert} />
+        <div className='absolute lg:top-52 lg:left-[500px] left-16 '>
+          <Alert alert={alert} setAlert={setAlert} />
+        </div>
       </div>
       <div className="mt-20">
         <Footer />
-      </div>
+      </div>    
     </div>
   );
 }

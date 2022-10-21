@@ -12,7 +12,7 @@ const Details = () => {
 
   // const singleSneaker = shop.find((item) => item.slug === slug);
   return (
-    <div className="lg:bg-[#E5E5E5] h-[650px]">
+    <div className="lg:bg-[#E5E5E5] h-[700px]">
       <div className='top-0'>
         <Navbar />
       </div>
@@ -25,7 +25,7 @@ const Details = () => {
             <DetailsInfo />
             </div>
         </div>
-      </div>   
+      </div> 
     </div>
   );
 }
