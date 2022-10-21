@@ -48,16 +48,16 @@ const DetailsPics = () => {
       {/* for laptop view */}
       <div className=" hidden lg:block">
         <img
-          className="lg:rounded-lg lg:h-72 lg:w-80"
+          className="lg:rounded-lg lg:h-76 lg:w-4/5"
           src={images[currentImage]}
           alt="currentImage"
         />
       </div>
       <div className="lg:flex ml-2 mt-4 hidden ">
         {currentImage === 0 ? (
-          <div className="bg-indigo-500 opacity-25 relative z-10 rounded-lg w-[60px] mr-4">
+          <div className="bg-indigo-500 opacity-25 relative z-10 rounded-lg w-[75px] mr-4">
             <img
-              className="w-[60px] mr-4 rounded-lg cursor-pointer "
+              className="w-[75px] mr-4 rounded-lg cursor-pointer "
               onClick={() => setCurrentImage(0)}
               src={images[0]}
               alt="imageOne"
@@ -65,16 +65,16 @@ const DetailsPics = () => {
           </div>
         ) : (
           <img
-            className="w-[60px] mr-4 rounded-lg cursor-pointer "
+            className="w-[75px] mr-4 rounded-lg cursor-pointer "
             onClick={() => setCurrentImage(0)}
             src={images[0]}
             alt="imageOne"
           />
         )}
         {currentImage === 1 ? (
-          <div className="bg-indigo-500 opacity-25 relative z-10 rounded-lg w-[60px] mr-4">
+          <div className="bg-indigo-500 opacity-25 relative z-10 rounded-lg w-[75px] mr-4">
             <img
-              className="w-[60px] mr-4 rounded-lg cursor-pointer "
+              className="w-[75px] mr-4 rounded-lg cursor-pointer "
               onClick={() => setCurrentImage(1)}
               src={images[1]}
               alt="imageTwo"
@@ -82,16 +82,16 @@ const DetailsPics = () => {
           </div>
         ) : (
           <img
-            className="w-[60px] mr-4 rounded-lg cursor-pointer "
+            className="w-[75px] mr-4 rounded-lg cursor-pointer "
             onClick={() => setCurrentImage(1)}
             src={images[1]}
             alt="imageTwo"
           />
         )}
         {currentImage === 2 ? (
-          <div className="bg-indigo-500 opacity-25 relative z-10 rounded-lg w-[60px] mr-4">
+          <div className="bg-indigo-500 opacity-25 relative z-10 rounded-lg w-[75px] mr-4">
             <img
-              className="w-[60px] mr-4 rounded-lg cursor-pointer "
+              className="w-[75px] mr-4 rounded-lg cursor-pointer "
               onClick={() => setCurrentImage(2)}
               src={images[2]}
               alt="imageThree"
@@ -99,16 +99,16 @@ const DetailsPics = () => {
           </div>
         ) : (
           <img
-            className="w-[60px] mr-4 rounded-lg cursor-pointer "
+            className="w-[75px] mr-4 rounded-lg cursor-pointer "
             onClick={() => setCurrentImage(2)}
             src={images[2]}
             alt="imageThree"
           />
         )}
         {currentImage === 3 ? (
-          <div className="bg-indigo-500 opacity-25 relative z-10 rounded-lg w-[60px] mr-4">
+          <div className="bg-indigo-500 opacity-25 relative z-10 rounded-lg w-[75px] mr-4">
             <img
-              className="w-[60px] mr-4 rounded-lg cursor-pointer "
+              className="w-[75px] mr-4 rounded-lg cursor-pointer "
               onClick={() => setCurrentImage(3)}
               src={images[3]}
               alt="imageFour"
@@ -116,7 +116,7 @@ const DetailsPics = () => {
           </div>
         ) : (
           <img
-            className="w-[60px] mr-4 rounded-lg cursor-pointer "
+            className="w-[75px] mr-4 rounded-lg cursor-pointer "
             onClick={() => setCurrentImage(3)}
             src={images[3]}
             alt="imageFour"

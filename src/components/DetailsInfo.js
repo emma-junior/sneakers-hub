@@ -8,7 +8,7 @@ const DetailsInfo = () => {
 
     const dispatch = useDispatch()
   return (
-    <div className=" mt-5">
+    <div className=" mt-5 lg:mt-12">
       <h2 className="text-indigo-400 text-sm">SNEAKERS HUB</h2>
       <h2 className="font-bold text-3xl my-5">{productDetails.title}</h2>
       <p>{productDetails.description}</p>
