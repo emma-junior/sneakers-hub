@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 const ProductCard = ({shopProduct}) => {
     const dispatch = useDispatch();
   return (
-    <div className='bg-white lg:w-80 w-76 shadow-lg shadow-black-500/50 rounded-2xl' key={shopProduct.id}>
+    <div className='my-5 bg-white lg:w-80 w-76 shadow-lg shadow-black-500/50 rounded-2xl' key={shopProduct.id}>
           <motion.div whileHover={{ scale: 1.1 }}>
             <Link to={`/details`}>
               <img
