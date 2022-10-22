@@ -7,18 +7,18 @@ import { useDispatch } from 'react-redux';
 const ProductCard = ({shopProduct}) => {
     const dispatch = useDispatch();
   return (
-    <div className='pb-6' key={shopProduct.id}>
+    <div className='bg-white lg:w-80 w-76 shadow-lg shadow-black-500/50 rounded-2xl' key={shopProduct.id}>
           <motion.div whileHover={{ scale: 1.1 }}>
             <Link to={`/details`}>
               <img
                 onClick={() => dispatch(loadCurrentItem(shopProduct))}
-                className="w-76 lg:w-80 cursor-pointer"
+                className="w-full rounded-t-2xl cursor-pointer"
                 src={shopProduct.images.imageOne}
                 alt=""
               />
             </Link>
           </motion.div>
-          <div className="py-5 bg-white lg:w-80 w-76 px-2 shadow-lg shadow-black-500/50">
+          <div className="py-5 px-4">
             <h2 className="font-bold">{shopProduct.title}</h2>
             <h2 className="font-semibold pt-2">${shopProduct.price}</h2>
             <div className="my-3">

@@ -1,53 +1,51 @@
-import React, { useState } from 'react'
-import { useDispatch } from "react-redux";
-import {removeFromCart, adjustQty } from "../redux/actions";
-import { MdDelete } from "react-icons/md";
+import React, {useState, useEffect} from 'react'
+import { useSelector } from 'react-redux'
+import CartItemCard from './CartItemCard';
 
-const CartItem = ({cartItems}) => {
-  const [input, setInput] = useState(cartItems.qty)          
-  const dispatch = useDispatch();
+const CartItem = () => {
+    const yourCart = useSelector((state) => state.cart);
+
+    const [totalItem, setTotalItem] = useState(0)
+    const [totalAmount, setTotalAmount] = useState(0)
+
+    useEffect(() => {
+        let items = 0;
+        let amount = 0;
+        yourCart.forEach((item) => {
+            items += item.qty
+            amount += item.qty * item.price
+        })
+        setTotalItem(items)
+        setTotalAmount(amount)
+    },[yourCart, totalItem, totalAmount, setTotalItem, setTotalAmount])
 
   return (
     <div>
-            <div className="lg:m-5 m-7 " key={cartItems.id}>
-              <div>
-                <img
-                  className="bg-cover h-72 w-[300px] lg:w-[300px] rounded-md p-2"
-                  src={cartItems.images.imageOne}
-                  alt=""
-                ></img>
+        {yourCart.length < 1 && (
+          <h2 className="font-meduim text-3xl flex h-screen w-full items-center justify-center">
+            There are no items in cart
+          </h2>
+        )}
+      {yourCart.length > 0 && <div className="lg:w-1/2 w-11/12 mx-auto bg-white shadow-lg shadow-slate-300 rounded-lg p-4 lg:p-8">
+        <h2 className='text-center text-3xl font-medium my-5'>Your cart items</h2>
+        {yourCart.map((cartItems) => {
+            return (
+              <div className='py-3'>
+                <CartItemCard cartItems={cartItems} />
               </div>
-              <div className=" w-[283px] px-2 p-4 shadow-lg shadow-black-500/50 mt-0 ml-2">
-                <h2 className="font-bold pb-3">{cartItems.title}</h2>
-                <h2 className="font-bold pb-7">$ {cartItems.price}</h2>
-                <div className="flex">
-                  <>
-                    <label for="quantity" className="font-bold">
-                      Qty:
-                    </label>
-                    <input
-                      className="ml-2 border-solid border-2 border-[#666] rounded-full p-1"
-                      type="number"
-                      value={input}
-                      id="quantity"
-                      name="quantity"
-                      onChange={(e) => {
-                        dispatch(adjustQty(cartItems.id, e.target.value));
-                        setInput(e.target.value)
-                      }}
-                      min="1"
-                      max="5"
-                    ></input>
-                  </>
-                  <button
-                    className="text-2xl lg:ml-7 ml-28"
-                    onClick={() => dispatch(removeFromCart(cartItems.id))}
-                  >
-                    <MdDelete />
-                  </button>
-                </div>
-              </div>
-            </div>     
+            );
+        })}
+        <hr className='my-7' />
+        <div className='flex w-full justify-between'>
+          <p className='text-xl text-slate-600 font-normal'>Total</p>
+          <p className='text-xl font-medium'>({totalItem} item)</p>
+        </div>
+        <div className='flex w-full justify-between my-2'>
+          <p className='text-xl text-slate-600 font-normal'>Subtotal</p>
+          <p className='text-xl font-bold'>${totalAmount}</p>
+        </div>
+        <button className='w-full h-10 bg-indigo-700 hover:bg-indigo-500 my-4 rounded-lg text-white font-medium'>Place order</button>
+      </div>}
     </div>
   );
 }

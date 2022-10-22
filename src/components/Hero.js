@@ -14,7 +14,7 @@ const Hero = () => {
             <p className='lg:w-[420px] w-full my-4'>Dedicated since 1989 to giving you the best sneakers anywhere in the world at the best rate</p>
             <button className='bg-indigo-700 hover:bg-indigo-500 py-3 px-8 rounded-full text-white font-bold'>SHOP NOW</button>
         </div>
-        <div data-aos="fade-left" className=''>
+        <div data-aos="fade-left" className='mt-5 lg:mt-0'>
             {/* <img className='w-[400px] rounded-full h-[400px] bg-cover bg-center motion-reduce:animate-bounce' src='/assets/hero-pic.jpg' alt='' /> */}
             <img className='w-[450px]  animate-bounce' src='/assets/hero-shopping.png' alt='' />
         </div>

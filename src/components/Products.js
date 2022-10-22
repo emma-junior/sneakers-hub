@@ -18,7 +18,7 @@ const Products = () => {
   const usersPerPage = 6;
   const pagesVisited = pageNumber * usersPerPage;
 
-  const search =  shop.filter( (item) => item.title.toLowerCase().includes(input));
+  const search =  shop.filter( (item) => item.title.toLowerCase().includes(input.toLowerCase()));
 
   const displayUsers = search
     .slice(pagesVisited, pagesVisited + usersPerPage)
@@ -40,7 +40,7 @@ const Products = () => {
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className="lg:w-1/3 w-4/5 h-10 border-solid border-2 border-indigo-700 pl-3 "
+            className="lg:w-1/3 w-4/5 h-10 border-solid border-2 border-indigo-700 outline-indigo-700 pl-3 "
           />
           <h2 className='bg-indigo-700 my-auto text-2xl p-2 text-white'><FaSearch /></h2>
         </div>
