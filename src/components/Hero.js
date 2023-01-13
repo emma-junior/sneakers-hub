@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <section className="lg:h-[100vh] w-[90%] lg:w-[90%] mx-auto lg:flex items-center justify-between pt-24 lg:pt-2">
-      <div data-aos="fade-right" className="lg:w-[45%] ">
+      <div data-aos="slide-up" className="lg:w-[45%] ">
         <h2 className="lg:text-5xl text-4xl font-bold text-black ">
           SHOP YOUR SNEAKERS AT THE BEST RATE
         </h2>
@@ -23,14 +23,20 @@ const Hero = () => {
       </div>
       <div className="mt-5 lg:w-[45%] lg:mt-0 relative">
         {/* <img className='w-[450px]  animate-bounce' src='/assets/hero-shopping.png' alt='' /> */}
-        <div className="w-[350px] h-[200px] absolute left-0 top-5 z-10">
+        <div
+          data-aos="fade-right"
+          className="w-[350px] h-[200px] absolute left-0 top-5 z-10"
+        >
           <img
-            className=" w-full max-w-full h-full  object-cover "
+            className=" w-full max-w-full h-full object-cover "
             src="/assets/usama-akram-two.jpg"
             alt=""
           />
         </div>
-        <div className="w-[400px] h-[250px] absolute left-28 -top-36">
+        <div
+          data-aos="fade-down-left"
+          className="w-[400px] h-[250px] absolute left-28 -top-36"
+        >
           <img
             className="w-full max-w-full h-full  object-cover "
             src="/assets/usama-akram-one.jpg"
