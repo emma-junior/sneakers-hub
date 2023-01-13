@@ -21,11 +21,11 @@ const Hero = () => {
           SHOP NOW
         </button>
       </div>
-      <div className="mt-5 lg:w-[45%] lg:mt-0 relative">
+      <div className="my-24 lg:w-[45%] lg:my-0 relative">
         {/* <img className='w-[450px]  animate-bounce' src='/assets/hero-shopping.png' alt='' /> */}
         <div
           data-aos="fade-right"
-          className="w-[350px] h-[200px] absolute left-0 top-5 z-10"
+          className=" w-[240px] h-[170px] lg:w-[350px] lg:h-[200px] absolute left-0 top-12 lg:top-5 z-10"
         >
           <img
             className=" w-full max-w-full h-full object-cover "
@@ -35,7 +35,7 @@ const Hero = () => {
         </div>
         <div
           data-aos="fade-down-left"
-          className="w-[400px] h-[250px] absolute left-28 -top-36"
+          className="w-[280px] h-[200px] lg:w-[400px] lg:h-[250px] absolute left-12 lg:left-28 -top-20 lg:-top-36"
         >
           <img
             className="w-full max-w-full h-full  object-cover "
